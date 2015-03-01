@@ -2,3 +2,5 @@
 - include: java.yml
 
 - include: sonar.yml
+
+- include: scoverage.yml

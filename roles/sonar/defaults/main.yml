@@ -1,6 +1,8 @@
 sonar_major                              : "5"
 sonar_minor                              : "0.1"
 
+sonar_port                               : "9000"
+
 sonar_owner                              : "sonar"
 sonar_group                              : "sonar"
 sonar_shell                              : "/bin/bash"

@@ -1,0 +1,9 @@
+---
+
+- name: Download scoverage plugin and restart Sonar
+  get_url:
+    url="https://github.com/RadoBuransky/sonar-scoverage-plugin/releases/download/1.1.0/sonar-scoverage-plugin-1.1.0.jar"
+    dest="{{sonar_ext_dir}}/sonar-scoverage-plugin-1.1.0.jar"
+  notify: restart sonar
+  sudo_user: "{{sonar_owner}}"
+  tags: sonar_plugins
