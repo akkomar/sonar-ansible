@@ -20,3 +20,14 @@ sonar_bin_dir         : "{{sonar_home_dir}}/bin"
 sonar_webapp          : "{{sonar_home_dir}}/webapps"
 sonar_war_dir         : "{{sonar_home_dir}}/war/sonar-server/deploy/plugins/"
 sonar_ext_dir         : "{{sonar_home_dir}}/extensions/plugins/"
+
+# JDBC Setting
+#postgres
+#sonar_jdbc_driver                        : "h2" # postgres, h2 or mysql
+#sonar_jdbc_host                          : "127.0.0.1"
+#sonar_jdbc_port                          : 9092 # h2 default is 9092 postgresql 5432 and mysql is 3306
+sonar_jdbc_user                          : "sonar"
+sonar_jdbc_pass                          : "sonar"
+sonar_jdbc_db                            : sonar
+#sonar_psq_schema                         : sonar ## PostgreSQL account has permissions to access multiple schemas (check documentation)
+sonar_postgres_sudo_user                 : postgres
