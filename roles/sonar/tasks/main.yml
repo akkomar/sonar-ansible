@@ -1,6 +1,8 @@
 ---
 - include: java.yml
 
+- include: postgresql.yml
+
 - include: sonar.yml
 
 - include: scoverage.yml

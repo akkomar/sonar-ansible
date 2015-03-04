@@ -1,0 +1,4 @@
+---
+
+- name: Install Postgresql database
+  apt: pkg=postgresql state=latest update-cache=yes force=yes
