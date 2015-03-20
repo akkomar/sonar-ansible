@@ -2,6 +2,7 @@
 
 - name: Install Postgresql database
   apt: pkg=postgresql state=latest update-cache=yes force=yes
+  register: postgresql_setup
   tags: postgresql_server
 
 - name: Install python psycopg2 module
@@ -12,6 +13,13 @@
   service: name=postgresql
            enabled=yes
            state=started
+  tags: postgresql_server
+
+- name: Setup postgres cluster
+  shell: pg_createcluster --start 9.3 main
+  sudo_user: root
+  when: postgresql_setup.changed
+  tags: postgresql_server
 
 - name: postgresql | Create sonar postgresql user
   postgresql_user:
