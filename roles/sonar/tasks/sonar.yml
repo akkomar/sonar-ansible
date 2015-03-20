@@ -59,12 +59,12 @@
     group="{{sonar_group}}"
   tags: sonar_setup
 
-#- name: Configure sonar server properties
-#  template:
-#    src=sonar.conf.j2
-#    dest="{{sonar_conf_dir}}/sonar.properties"
-#  tags: sonar_setup
-#  notify: restart sonar
+- name: Configure sonar server properties
+  template:
+    src=sonar.conf.j2
+    dest="{{sonar_conf_dir}}/sonar.properties"
+  tags: sonar_setup
+  notify: restart sonar
 
 - name: Install sonar init script
   file:
